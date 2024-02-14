@@ -1,0 +1,2 @@
+o qualify the student to develop and implement small complexity digital systems projects; Familiarization with technical documentation provided by the manufacturers of the digital logic circuit’s components; integrated circuits and instrumentation bench, basic concept applications, analysis and synthesis techniques of logic circuits using dedicated and standard integrated circuits, programmable logic devices; Incentive of teamwork; Learning of the process of technical documentation elaboration related to logic circuit projects.
+ 
