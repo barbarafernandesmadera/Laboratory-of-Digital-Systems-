@@ -1,0 +1,19 @@
+-- bom dia
+entity tff is
+	port(
+		clk, clr, t	: in bit;
+		q				: buffer bit
+	);
+end dff;
+
+architecture rtl of tff is
+begin
+	check_clock process(clk, clr)
+	begin
+		if(clr = '1') then
+			q <= '0';
+		elsif(clk'event and clk = '1') then
+			q <=  t xor q;
+		end if;
+	end process;
+end rtl;

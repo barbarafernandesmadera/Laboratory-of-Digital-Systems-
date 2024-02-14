@@ -1,0 +1,13 @@
+entity MercurioIV_Reg is
+	port(
+		SW: in bit_vector(3 downto 0);
+		KEY : in bit_vector(11 downto 0);
+		DISP0 : out bit_vector(7 downto 0)
+	);
+end MercurioIV_Reg;
+
+architecture top of MercurioIV_Reg is
+begin
+	reg_0 : reg
+		generic map (n => 4)
+		port map(clk => KEY(0), en => KEY(2),  d => SW, q => );

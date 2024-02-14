@@ -1,0 +1,27 @@
+-- Projeto somador de Nbits
+-- Aula 06 - SEL0384
+-- Autores:
+--Bárbara Fernandes Madera - nº: 11915032 
+--Johnny Caselato Guimarães - nº: 11915481 
+-- Professor: Maximiliam Luppe
+-- Data: 01/11/2023
+
+
+-- Definição da entidade MercurioIV_Reg com suas portas de entrada e saída
+entity MercurioIV_Reg is
+    port(
+        SW: in bit_vector(3 downto 0);   -- Entrada dos switches
+        KEY : in bit_vector(11 downto 0);   -- Entrada dos botões
+        DISP0 : out bit_vector(7 downto 0)   -- Saída para o display de 7 segmentos
+    );
+end MercurioIV_Reg;
+
+-- Definição da arquitetura top para a entidade MercurioIV_Reg
+architecture top of MercurioIV_Reg is
+begin
+    -- Instanciação do registrador de 4 bits (reg_0)
+    reg_0 : reg
+        generic map (n => 4)   -- Definição do tamanho do registrador (4 bits)
+        port map(clk => KEY(0), en => KEY(2),  d => SW, q => DISP0);
+        -- Mapeamento das portas: clock (KEY(0)), enable (KEY(2)), dados (SW) e saída (DISP0)
+end top;

@@ -1,0 +1,10 @@
+--Bom dia
+
+entity MercurioIV_FF is
+	port(
+		SW 	: in bit_vector(3 downto 0);
+		KEY	: in bit_vector(11 downto 0);
+		LEDM_C: out bit_vector(4 downto 0);
+		LEDM_R: out bit_vector(7 downto 0)
+	);
+end MercurioIV_FF
